@@ -4,5 +4,6 @@ from django.http import HttpResponse
 def home(request):
     print(f"request: %s" % request)
     print(request.body)
-    return HttpResponse(f"request : {request}{request.user}{request.session}")
+    # return HttpResponse(f"request : {request}{request.user}{request.session}")
+    return render(request, "home.html")
 
